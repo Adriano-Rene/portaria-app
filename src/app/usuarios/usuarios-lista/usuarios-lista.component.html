@@ -34,6 +34,7 @@
                         <th>Telefone</th>
                         <th>CPF</th>
                         <th>Data Cadastro</th>
+                        <th>Funcao</th>
                         <th></th>
                     </tr>
                 </thead>
@@ -44,6 +45,7 @@
                         <td>{{ usuario.telefone }}</td>
                         <td>{{ usuario.cpf }}</td>
                         <td>{{ usuario.dataNascimento }}</td>
+                        <td>{{ usuario.funcao }}</td>
                         <td>
                             <button class="btn btn-primary" routerLink="/usuarios-form/{{ usuario.id }}">
                                 <i class="fa fa-edit"></i>

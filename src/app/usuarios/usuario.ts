@@ -3,5 +3,6 @@ export class Usuario{
     nome:string;
     telefone:number;
     cpf:string;
-    dataNascimento:string
+    dataNascimento:string;
+    funcao:string
 }

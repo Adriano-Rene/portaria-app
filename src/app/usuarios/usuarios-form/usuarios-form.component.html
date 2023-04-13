@@ -27,8 +27,8 @@
 
             <div class="col-md-6">
                 <div class="form-group">
-                    <label >Data Cadastro:</label>
-                    <input type="text" class="form-control" disabled="true" [ngModel]="usuario.dataNascimento" name="dataNascimento" >
+                    <label >Data Nascimento:</label>
+                    <input type="text" [(ngModel)]="usuario.dataNascimento" name="dataNascimento" class="form-control">
                 </div>
             </div>
         </div>
@@ -43,10 +43,19 @@
 
             <div class="col-md-6">
                 <div class="form-group">
+                    <label >Telefone:</label>
+                    <input type="number" [(ngModel)]="usuario.telefone" name="telefone" class="form-control">
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="form-group">
                     <label >CPF:</label>
                     <input type="text" [(ngModel)]="usuario.cpf" name="cpf" class="form-control">
                 </div>
             </div>
+
+           
         </div>
         
         <div class="row">

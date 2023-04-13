@@ -31,6 +31,7 @@
                     <tr>
                         <th>ID</th>
                         <th>Nome</th>
+                        <th>Telefone</th>
                         <th>CPF</th>
                         <th>Data Cadastro</th>
                         <th></th>
@@ -40,6 +41,7 @@
                     <tr *ngFor="let usuario of usuarios">
                         <td>{{ usuario.id }}</td>
                         <td>{{ usuario.nome }}</td>
+                        <td>{{ usuario.telefone }}</td>
                         <td>{{ usuario.cpf }}</td>
                         <td>{{ usuario.dataNascimento }}</td>
                         <td>

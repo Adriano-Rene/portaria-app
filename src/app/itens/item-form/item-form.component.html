@@ -1,1 +1,22 @@
-<p>item-form works!</p>
+<h1 class="mt-4">Itens</h1>
+<ol class="breadcrumb mb-4">
+    <li class="breadcrumb-bitem col-md-4 active">Novo</li>
+</ol>
+<div class="container">
+    <form #form="ngForm" (submit)="onSubmit()">
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label>Usuario: </label>
+                    <select>
+                        <option value="">Selecione...</option>
+                        <option *ngFor="let usuario of usuarios" [ngValue]="usuario.id">
+                            {{ usuario.nome }}
+                        </option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

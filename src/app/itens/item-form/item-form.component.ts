@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Usuario } from '../../usuarios/usuario';
+import { UsuariosService } from '../../usuarios.service'
 
 @Component({
   selector: 'app-item-form',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ItemFormComponent implements OnInit {
 
-  constructor() { }
+  usuarios: Usuario[] = []
+
+  constructor(
+    private usuarioService : UsuariosService
+  ) { }
 
   ngOnInit(): void {
+    this.usuarioService.getUsuarios().subscribe( response => this.usuarios = response)
+
+  }
+
+  onSubmit(){
+
   }
 
 }

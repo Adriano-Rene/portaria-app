@@ -127,6 +127,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "portaria-app"
+    }
+  },
+  "defaultProject": "portaria-app",
+  "cli": {
+    "analytics": "00bb460e-312d-4d5f-8b43-b78aa90c4030"
+  }
 }

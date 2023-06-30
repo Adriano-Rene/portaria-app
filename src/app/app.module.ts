@@ -10,6 +10,7 @@ import { TemplateModule } from './template/template.module';
 import { HomeComponent } from './home/home.component'
 import { UsuariosService} from './usuarios.service'
 import { ItensModule } from './itens/itens.module';
+import { ItemServService } from './item-serv.service';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ItensModule } from './itens/itens.module';
     ItensModule
   ],
   providers: [
-    UsuariosService
+    UsuariosService,
+    ItemServService
   ],
   bootstrap: [AppComponent]
 })

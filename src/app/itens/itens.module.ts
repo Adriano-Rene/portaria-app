@@ -16,7 +16,8 @@ import { RouterModule } from '@angular/router';
     FormsModule,
     RouterModule
   ], exports : [
-    ItemFormComponent, ItemListaComponent
+    ItemFormComponent, 
+    ItemListaComponent
   ]
 })
 export class ItensModule { }

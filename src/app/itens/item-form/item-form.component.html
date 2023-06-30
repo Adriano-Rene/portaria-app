@@ -9,7 +9,9 @@
             <div class="col-md-12">
                 <div class="form-group">
                     <label>Usuario: </label>
-                    <select>
+                    <select class="form-control"
+                    [ngModelOptions]="{standalone: true}"
+                    [(ngModel)]="item.idUsuario">
                         <option value="">Selecione...</option>
                         <option *ngFor="let usuario of usuarios" [ngValue]="usuario.id">
                             {{ usuario.nome }}
@@ -18,5 +20,51 @@
                 </div>
             </div>
         </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="formgroup">
+                    <label>Nome do item:</label>
+                    <input class="form-control" [(ngModel)]="item.nome" type="text" name="nomeItem" id="inputNomeItem">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="formgroup">
+                    <label>Descrição</label>
+                    <input class="form-control" [(ngModel)]="item.descricao" type="text" name="descricao" id="inputDescricao">
+                </div>
+            </div>
+        </div>
+
+    
+       
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="formgroup">
+                    <label>Sala</label>
+                    <input class="form-control" [(ngModel)]="item.sala" type="text" name="sala" id="inputSala">
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="formgroup">
+                    <label>Data</label>
+                    <input class="form-control" [(ngModel)]="item.data" type="text" name="data" id="inputData">
+                </div>
+            </div>
+        </div>
+
+      
+          
+        
+
+        <div class="row" >
+            <div class="col-md-3">
+                <button class="btn btn-success mt-4" type="submit" >
+                <i class="fa fa-save"></i>
+                Salvar</button></div>
+        </div>
+
     </form>
 </div>

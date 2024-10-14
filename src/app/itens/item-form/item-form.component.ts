@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Usuario } from '../../usuarios/usuario';
 import { UsuariosService } from '../../usuarios.service'
 import { Item } from '../item';
-import { ItemDTO } from '../itens';
+import { ItemDTO } from '../itemDTO';
+import { ItemServService } from '../../item-serv.service'
 
 @Component({
   selector: 'app-item-form',
@@ -15,8 +16,11 @@ export class ItemFormComponent implements OnInit {
   item : ItemDTO;
 
   constructor(
-    private usuarioService : UsuariosService
-  ) { this.item = new ItemDTO() }
+    private usuarioService : UsuariosService,
+    private service : ItemServService
+  ) { 
+    this.item = new ItemDTO() 
+  }
 
   ngOnInit(): void {
     this.usuarioService.getUsuarios().subscribe( response => this.usuarios = response)
@@ -24,6 +28,8 @@ export class ItemFormComponent implements OnInit {
   }
 
   onSubmit(){
+    this.service.salvar(this.item).subscribe(response => {console.log(response)})
+    
     console.log(this.item)
   }
 
